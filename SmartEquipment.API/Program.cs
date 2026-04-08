@@ -1,5 +1,7 @@
 using SmartEquipment.Application.Interfaces;
+using SmartEquipment.Application.Interfaces.Repositories;
 using SmartEquipment.Application.Services;
+using SmartEquipment.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();
 builder.Services.AddScoped<IDeviceService, DeviceService>();
 
 var app = builder.Build();

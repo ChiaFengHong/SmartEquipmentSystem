@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SmartEquipment.Application\SmartEquipment.Application.csproj" />
+    <ProjectReference Include="..\SmartEquipment.Infrastructure\SmartEquipment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
